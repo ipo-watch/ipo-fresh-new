@@ -17,23 +17,14 @@
 
         body {
             font-family: 'Noto Sans JP', sans-serif;
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            background: #f8fafb;
             min-height: 100vh;
-            color: #1a1a1a;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            color: #2c3e50;
         }
 
         .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 2px solid #ff7f27;
+            background: #ffffff;
+            border-bottom: 2px solid #20b2aa;
             padding: 20px 40px;
             display: flex;
             justify-content: space-between;
@@ -41,15 +32,13 @@
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(32, 178, 170, 0.08);
         }
 
         .logo {
             font-size: 28px;
             font-weight: 700;
-            background: linear-gradient(135deg, #ff7f27 0%, #ff9d4d 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #20b2aa;
         }
 
         .tabs {
@@ -64,15 +53,15 @@
             cursor: pointer;
             padding: 10px 20px;
             border-radius: 8px;
-            color: #666;
+            color: #7f8c8d;
             transition: all 0.3s;
             font-weight: 600;
         }
 
         .tab-btn.active {
-            background: linear-gradient(135deg, #ff7f27 0%, #ff9d4d 100%);
-            color: white;
-            box-shadow: 0 4px 12px rgba(255, 127, 39, 0.3);
+            background: #e8f7f6;
+            color: #20b2aa;
+            border-bottom: 3px solid #20b2aa;
         }
 
         .container {
@@ -92,8 +81,7 @@
         h1 {
             font-size: 28px;
             margin-bottom: 30px;
-            color: white;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            color: #2c3e50;
         }
 
         .filters {
@@ -105,18 +93,24 @@
 
         .filters select {
             padding: 10px 15px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 6px;
+            border: 1px solid #dde4e9;
+            border-radius: 8px;
             font-family: inherit;
             cursor: pointer;
-            background: rgba(255, 255, 255, 0.9);
+            background: #ffffff;
             transition: all 0.3s;
-            backdrop-filter: blur(10px);
+            color: #2c3e50;
         }
 
         .filters select:hover {
-            border-color: #ff7f27;
-            box-shadow: 0 2px 8px rgba(255, 127, 39, 0.2);
+            border-color: #20b2aa;
+            background: #e8f7f6;
+        }
+
+        .filters select:focus {
+            outline: none;
+            border-color: #20b2aa;
+            box-shadow: 0 0 0 3px rgba(32, 178, 170, 0.1);
         }
 
         .stats {
@@ -127,23 +121,22 @@
         }
 
         .stat-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: #ffffff;
             padding: 20px;
             border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dde4e9;
+            box-shadow: 0 1px 4px rgba(32, 178, 170, 0.06);
             transition: all 0.3s;
         }
 
         .stat-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(255, 127, 39, 0.2);
+            border-color: #20b2aa;
+            box-shadow: 0 4px 12px rgba(32, 178, 170, 0.12);
         }
 
         .stat-label {
             font-size: 12px;
-            color: #999;
+            color: #95a5a6;
             margin-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -152,9 +145,7 @@
         .stat-value {
             font-size: 32px;
             font-weight: 700;
-            background: linear-gradient(135deg, #ff7f27 0%, #ff9d4d 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #20b2aa;
         }
 
         .ipo-grid {
@@ -165,24 +156,22 @@
         }
 
         .ipo-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 16px;
+            background: #ffffff;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 4px rgba(32, 178, 170, 0.06);
             transition: all 0.3s;
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            position: relative;
+            border: 1px solid #dde4e9;
         }
 
         .ipo-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 16px 48px rgba(255, 127, 39, 0.25);
-            border-color: #ff7f27;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(32, 178, 170, 0.12);
+            border-color: #20b2aa;
         }
 
         .ipo-card-header {
-            background: linear-gradient(135deg, #ff7f27 0%, #ff9d4d 100%);
+            background: #20b2aa;
             color: white;
             padding: 20px;
             position: relative;
@@ -193,12 +182,11 @@
             top: 15px;
             right: 15px;
             background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
             padding: 8px 14px;
             border-radius: 8px;
             font-weight: 700;
             font-size: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .ipo-card-code {
@@ -224,11 +212,11 @@
 
         .ipo-description {
             font-size: 13px;
-            color: #666;
+            color: #7f8c8d;
             line-height: 1.5;
             margin-bottom: 15px;
             padding-bottom: 15px;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid #ecf0f1;
         }
 
         .ipo-info-row {
@@ -239,12 +227,12 @@
         }
 
         .ipo-info-label {
-            color: #999;
+            color: #95a5a6;
         }
 
         .ipo-info-value {
             font-weight: 600;
-            color: #1a1a1a;
+            color: #2c3e50;
         }
 
         .ipo-chart-container {
@@ -255,17 +243,16 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: #ffffff;
+            border: 1px solid #dde4e9;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 1px 4px rgba(32, 178, 170, 0.06);
             margin-top: 20px;
         }
 
         th {
-            background: linear-gradient(135deg, #ff7f27 0%, #ff9d4d 100%);
+            background: #20b2aa;
             color: white;
             padding: 15px;
             text-align: left;
@@ -275,12 +262,12 @@
 
         td {
             padding: 12px 15px;
-            border-bottom: 1px solid #f0f0f0;
+            border-bottom: 1px solid #ecf0f1;
             font-size: 14px;
         }
 
         tr:hover {
-            background: #fafaf8;
+            background: #f8fafb;
         }
 
         .badge {
@@ -292,24 +279,24 @@
         }
 
         .badge-win {
-            background: rgba(76, 175, 80, 0.2);
-            color: #2e7d32;
+            background: rgba(46, 204, 113, 0.15);
+            color: #27ae60;
         }
 
         .badge-loss {
-            background: rgba(244, 67, 54, 0.2);
-            color: #c62828;
+            background: rgba(231, 76, 60, 0.15);
+            color: #c0392b;
         }
 
         .percent {
-            color: #ff7f27;
+            color: #20b2aa;
             font-weight: 600;
         }
 
         .empty {
             text-align: center;
             padding: 40px;
-            color: #999;
+            color: #95a5a6;
         }
 
         @media (max-width: 768px) {
@@ -361,7 +348,30 @@
         <!-- 近日上場 -->
         <div class="section active">
             <h1>🔔 近日上場IPO銘柄</h1>
-            <div class="ipo-grid" id="upcomingGrid"></div>
+            <div class="ipo-grid" id="upcomingGrid">
+                <div class="ipo-card">
+                    <div class="ipo-card-header">
+                        <div class="ipo-card-score">85/100</div>
+                        <div class="ipo-card-code">550A</div>
+                        <div class="ipo-card-name">サンプル企業A</div>
+                        <div class="ipo-card-date">📅 2026-04-09</div>
+                    </div>
+                    <div class="ipo-card-body">
+                        <div class="ipo-description">これはサンプルの企業説明です。実際のデータが入ります。</div>
+                        <div class="ipo-info-row">
+                            <span class="ipo-info-label">BB期間:</span>
+                            <span class="ipo-info-value">03/24～03/30</span>
+                        </div>
+                        <div class="ipo-info-row">
+                            <span class="ipo-info-label">仮条件:</span>
+                            <span class="ipo-info-value">1,000円～1,200円</span>
+                        </div>
+                        <div class="ipo-chart-container">
+                            <canvas id="chart-0"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- 過去6年 -->
@@ -425,21 +435,19 @@
                         <th>結果</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                    <tr>
+                        <td colspan="7" class="empty">データはここに表示されます</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
 
     <script>
+        // ダミーデータ（後でデータを追加）
         const upcoming = [
-            { code: '550A', name: 'ソフトテックス', date: '2026-04-09', bookbuilding: '03/24～03/30', offeringPrice: '-', description: 'IoTソリューションの開発・提供企業。企業向けのスマートファクトリーシステムを手がける。', score: 82 },
-            { code: '549A', name: 'ヒトトホールディングス', date: '2026-04-07', bookbuilding: '03/19～03/26', offeringPrice: '-', description: '人材育成・研修サービスを展開。企業の人的資本投資をサポートするプラットフォーム。', score: 75 },
-            { code: '548A', name: 'システムエグゼ', date: '2026-04-06', bookbuilding: '03/19～03/26', offeringPrice: '-', description: 'システム開発・ITコンサルティング企業。DX化推進をサポート。', score: 78 },
-            { code: '542A', name: 'ビタブリッドジャパン', date: '2026-04-02', bookbuilding: '03/17～03/24', offeringPrice: '-', description: 'ビタミン配合の医薬品・健康食品を開発。美容・健康領域での成長が期待される。', score: 85 },
-            { code: '529A', name: 'レクメド', date: '2026-04-02', bookbuilding: '03/17～03/23', offeringPrice: '-', description: '医療用ロボット・機器メーカー。手術支援ロボットの開発・販売を行う。', score: 88 },
-            { code: '523A', name: 'セイワホールディングス', date: '2026-03-27', bookbuilding: '03/11～03/17', offeringPrice: '1,230円～1,250円', description: '自動車部品メーカーの持株会社。電動化対応の部品開発が成長ドライバー。', score: 79 },
-            { code: '520A', name: 'ジェイファーマ', date: '2026-03-25', bookbuilding: '03/06～03/12', offeringPrice: '840円～900円', description: '医薬品開発企業。バイオテク分野での革新的な治療薬パイプラインを保有。', score: 86 },
-            { code: '519A', name: 'ベーシック', date: '2026-03-25', bookbuilding: '03/06～03/12', offeringPrice: '830円～870円', description: 'クラウドサービス企業。企業向けのデータ分析プラットフォームを展開。', score: 81 }
+            { code: '550A', name: 'サンプル企業A', date: '2026-04-09', bookbuilding: '03/24～03/30', offeringPrice: '1,000円～1,200円', description: 'これはサンプルの企業説明です。', score: 85 }
         ];
 
         const history = [
@@ -547,375 +555,156 @@
             { date: '2021-12-21', code: '9257', name: 'YCP ホールディングス', offering: 830, initial: 770 },
             { date: '2021-12-22', code: '4255', name: 'THECOO', offering: 7200, initial: 6100 },
             { date: '2021-12-22', code: '4256', name: 'サインド', offering: 3250, initial: 2990 },
-            { date: '2021-12-22', code: '4419', name: 'Finatext ホールディングス', offering: 1290, initial: 990 },
-            { date: '2021-12-22', code: '9522', name: 'リニューアブル・ ジャパン', offering: 1720, initial: 1663 },
-            { date: '2021-12-23', code: '4125', name: '三和油化工業', offering: 3500, initial: 4020 },
-            { date: '2021-12-23', code: '4258', name: '網屋', offering: 1970, initial: 2100 },
-            { date: '2021-12-23', code: '4259', name: 'エクサウィザーズ', offering: 1150, initial: 1030 },
-            { date: '2021-12-23', code: '4260', name: 'ハイブリッド テクノロジーズ', offering: 500, initial: 730 },
-            { date: '2021-12-23', code: '7134', name: 'クルーバー', offering: 2160, initial: 1800 },
-            { date: '2021-12-23', code: '9212', name: 'Green Earth Institute', offering: 1160, initial: 1160 },
-            { date: '2021-12-23', code: '9256', name: 'サクシード', offering: 1800, initial: 1800 },
-            { date: '2021-12-24', code: '2993', name: '長栄', offering: 1800, initial: 1656 },
-            { date: '2021-12-24', code: '4262', name: 'ニフティ ライフスタイル', offering: 2000, initial: 1800 },
-            { date: '2021-12-24', code: '4263', name: 'サスメド', offering: 1410, initial: 1500 },
-            { date: '2021-12-24', code: '9211', name: 'エフ・コード', offering: 2020, initial: 6000 },
-            { date: '2021-12-24', code: '9258', name: 'CS-C', offering: 1010, initial: 1205 },
-            { date: '2021-12-24', code: '9259', name: 'タカヨシ', offering: 1560, initial: 1700 },
-            { date: '2021-12-27', code: '4261', name: 'アジアクエスト', offering: 2430, initial: 5600 },
-            { date: '2021-12-27', code: '4264', name: 'セキュア', offering: 950, initial: 2185 },
-            { date: '2021-12-29', code: '4265', name: 'Institution for a Global Society', offering: 1720, initial: 2002 },
-            { date: '2022-02-04', code: '9214', name: 'Recovery International', offering: 1120, initial: 1030 },
-            { date: '2022-02-09', code: '9213', name: 'セイファート', offering: 2100, initial: 3000 },
-            { date: '2022-02-17', code: '4267', name: 'ライトワークス', offering: 350, initial: 694 },
-            { date: '2022-02-22', code: '4268', name: 'エッジテクノロジー', offering: 2020, initial: 2020 },
-            { date: '2022-02-22', code: '9215', name: 'CaSy', offering: 1350, initial: 2001 },
-            { date: '2022-02-24', code: '4270', name: 'BeeX', offering: 1600, initial: 3750 },
-            { date: '2022-02-25', code: '5025', name: 'マーキュリー リアルテック イノベーター', offering: 1270, initial: 1355 },
-            { date: '2022-03-02', code: '9216', name: 'ビーウィズ', offering: 1900, initial: 1900 },
-            { date: '2022-03-03', code: '7793', name: 'イメージ・マジック', offering: 810, initial: 820 },
-            { date: '2022-03-17', code: '5078', name: 'セレコーポレーション', offering: 1900, initial: 1820 },
-            { date: '2022-03-18', code: '6226', name: '守谷輸送機工業', offering: 1920, initial: 1920 },
-            { date: '2022-03-24', code: '7138', name: 'TORICO', offering: 1700, initial: 2510 },
-            { date: '2022-03-28', code: '9218', name: 'メンタルヘルス テクノロジーズ', offering: 630, initial: 880 },
-            { date: '2022-03-30', code: '9219', name: 'ギックス', offering: 1070, initial: 1100 },
-            { date: '2022-03-31', code: '5079', name: 'ノバック', offering: 3000, initial: 2630 },
-            { date: '2022-04-04', code: '5028', name: 'セカンドサイト アナリティカ', offering: 1390, initial: 3190 },
-            { date: '2022-04-12', code: '9220', name: 'エフビー 介護サービス', offering: 720, initial: 2320 },
-            { date: '2022-04-21', code: '5029', name: 'サークレイス', offering: 1630, initial: 1499 },
-            { date: '2022-04-21', code: '9223', name: 'ASNOVA', offering: 1140, initial: 1733 },
-            { date: '2022-04-25', code: '9221', name: 'フルハシEPO', offering: 1150, initial: 1150 },
-            { date: '2022-04-27', code: '2997', name: 'ストレージ王', offering: 660, initial: 756 },
-            { date: '2022-04-27', code: '5031', name: 'モイ', offering: 470, initial: 902 },
-            { date: '2022-04-28', code: '2998', name: 'クリアル', offering: 930, initial: 1600 },
-            { date: '2022-04-28', code: '7140', name: 'ペットゴー', offering: 550, initial: 1295 },
-            { date: '2022-05-31', code: '5026', name: 'トリプルアイズ', offering: 880, initial: 2200 },
-            { date: '2022-06-08', code: '9228', name: 'ウェルネス・ コミュニケーションズ', offering: 1530, initial: 4810 },
-            { date: '2022-06-20', code: '2984', name: 'ヤマイチ・ ユニハイム エステート', offering: 950, initial: 878 },
-            { date: '2022-06-21', code: '2999', name: 'ホームポジション', offering: 450, initial: 465 },
-            { date: '2022-06-21', code: '7386', name: 'ジャパン ワランティサポート', offering: 1640, initial: 1480 },
-            { date: '2022-06-23', code: '4890', name: '坪田ラボ', offering: 470, initial: 794 },
-            { date: '2022-06-23', code: '5032', name: 'ANYCOLOR', offering: 2070, initial: 2070 },
-            { date: '2022-06-24', code: '7794', name: 'イーディーピー', offering: 5000, initial: 8200 },
-            { date: '2022-06-24', code: '9227', name: 'マイクロ波化学', offering: 605, initial: 550 },
-            { date: '2022-06-27', code: '9229', name: 'サンウェルズ', offering: 1940, initial: 2300 },
-            { date: '2022-06-28', code: '5033', name: 'ヌーラボ', offering: 1000, initial: 955 },
-            { date: '2022-06-28', code: '9552', name: 'M&A総合研究所', offering: 1330, initial: 2510 },
-            { date: '2022-06-29', code: '9553', name: 'マイクロアド', offering: 1410, initial: 1290 },
-            { date: '2022-06-30', code: '9554', name: 'AViC', offering: 1020, initial: 1266 },
-            { date: '2022-07-08', code: '9556', name: 'INTLOOP', offering: 3500, initial: 3150 },
-            { date: '2022-07-28', code: '5034', name: 'unerry', offering: 1290, initial: 3000 },
-            { date: '2022-07-28', code: '5035', name: 'HOUSEI', offering: 400, initial: 580 },
-            { date: '2022-07-29', code: '9557', name: 'エアークローゼット', offering: 800, initial: 910 },
-            { date: '2022-08-02', code: '5036', name: '日本ビジネス システムズ', offering: 1520, initial: 1827 },
-            { date: '2022-08-05', code: '7110', name: 'クラシコム', offering: 1420, initial: 1520 },
-            { date: '2022-09-13', code: '9558', name: 'ジャパニアス', offering: 1020, initial: 2010 },
-            { date: '2022-09-16', code: '5038', name: 'eWeLL', offering: 1700, initial: 3910 },
-            { date: '2022-09-22', code: '7388', name: 'FPパートナー', offering: 2600, initial: 2750 },
-            { date: '2022-09-28', code: '5039', name: 'キットアライブ', offering: 1410, initial: 1666 },
-            { date: '2022-09-28', code: '5125', name: 'ファインズ', offering: 1800, initial: 2703 },
-            { date: '2022-09-28', code: '9561', name: 'グラッドキューブ', offering: 960, initial: 1500 },
-            { date: '2022-09-29', code: '5126', name: 'ポーターズ', offering: 1570, initial: 3275 },
-            { date: '2022-09-29', code: '9560', name: 'プログリット', offering: 730, initial: 1180 },
-            { date: '2022-09-30', code: '5127', name: 'グッピーズ', offering: 1550, initial: 2020 },
-            { date: '2022-10-06', code: '5129', name: 'FIXER', offering: 1340, initial: 1822 },
-            { date: '2022-10-07', code: '7112', name: 'キューブ', offering: 2140, initial: 2190 },
-            { date: '2022-10-12', code: '6526', name: 'ソシオネクスト', offering: 3650, initial: 3835 },
-            { date: '2022-10-19', code: '5834', name: 'SBIリーシング サービス', offering: 2980, initial: 3300 },
-            { date: '2022-10-20', code: '9562', name: 'ビジネスコーチ', offering: 2070, initial: 4155 },
-            { date: '2022-10-26', code: '5131', name: 'リンカーズ', offering: 300, initial: 503 },
-            { date: '2022-10-26', code: '9563', name: 'Atlas Technologies', offering: 1440, initial: 2320 },
-            { date: '2022-10-27', code: '9564', name: 'FCE Holdings', offering: 1560, initial: 2060 },
-            { date: '2022-10-28', code: '5132', name: 'pluszero', offering: 1650, initial: 3805 },
-            { date: '2022-11-15', code: '2936', name: 'ベースフード', offering: 800, initial: 710 },
-            { date: '2022-11-15', code: '5134', name: 'POPER', offering: 700, initial: 1110 },
-            { date: '2022-11-22', code: '4891', name: 'ティムス', offering: 670, initial: 919 },
-            { date: '2022-11-25', code: '5136', name: 'tripla', offering: 800, initial: 1620 },
-            { date: '2022-11-30', code: '9565', name: 'ウェルプレイド・ ライゼスト', offering: 1170, initial: 6200 },
-            { date: '2022-12-16', code: '5138', name: 'Rebase', offering: 1350, initial: 1710 },
-            { date: '2022-12-16', code: '5139', name: 'オープンワーク', offering: 3150, initial: 3500 },
-            { date: '2022-12-16', code: '7114', name: 'フーディソン', offering: 2300, initial: 2300 },
-            { date: '2022-12-19', code: '5240', name: 'トリドリ', offering: 1500, initial: 2733 },
-            { date: '2022-12-20', code: '5240', name: 'monoAI technology', offering: 660, initial: 1280 },
-            { date: '2022-12-20', code: '9338', name: 'INFORICH', offering: 4600, initial: 10510 },
-            { date: '2022-12-22', code: '2937', name: 'サンクゼール', offering: 1800, initial: 2201 },
-            { date: '2022-12-22', code: '5242', name: 'アイズ', offering: 2200, initial: 5160 },
-            { date: '2022-12-22', code: '5243', name: 'note', offering: 340, initial: 521 },
-            { date: '2022-12-22', code: '9339', name: 'コーチ・エィ', offering: 1840, initial: 2500 },
-            { date: '2022-12-23', code: '5244', name: 'jig.jp', offering: 340, initial: 476 },
-            { date: '2022-12-23', code: '5836', name: 'エージェント・ インシュアランス・ グループ', offering: 640, initial: 600 },
-            { date: '2022-12-23', code: '9340', name: 'アソ インターナショナル', offering: 870, initial: 1001 },
-            { date: '2022-12-23', code: '9341', name: 'GENOVA', offering: 1800, initial: 1760 },
-            { date: '2022-12-26', code: '5075', name: 'アップコン', offering: 1280, initial: 1000 },
-            { date: '2022-12-26', code: '7115', name: 'アルファパーチェス', offering: 880, initial: 869 },
-            { date: '2022-12-26', code: '7116', name: 'ダイワ通信', offering: 1700, initial: 1620 },
-            { date: '2022-12-27', code: '5246', name: 'ELEMENTS', offering: 160, initial: 312 },
-            { date: '2022-12-27', code: '5247', name: 'BTM', offering: 1500, initial: 2118 },
-            { date: '2022-12-29', code: '9342', name: 'スマサポ', offering: 800, initial: 2250 },
-            { date: '2023-01-26', code: '5248', name: 'テクノロジーズ', offering: 1000, initial: 3650 },
-            { date: '2023-02-22', code: '5250', name: 'プライム・ ストラテジー', offering: 1390, initial: 3130 },
-            { date: '2023-03-22', code: '7120', name: 'SHINKO', offering: 2200, initial: 2250 },
-            { date: '2023-03-23', code: '5252', name: '日本ナレッジ', offering: 1500, initial: 3750 },
-            { date: '2023-03-23', code: '7119', name: 'ハルメク ホールディングス', offering: 1720, initial: 1981 },
-            { date: '2023-03-23', code: '9343', name: 'アイビス', offering: 730, initial: 2121 },
-            { date: '2023-03-27', code: '5253', name: 'カバー', offering: 750, initial: 1750 },
-            { date: '2023-03-28', code: '5254', name: 'Arent', offering: 1440, initial: 1802 },
-            { date: '2023-03-28', code: '5255', name: 'モンスターラボ ホールディングス', offering: 720, initial: 1050 },
-            { date: '2023-03-28', code: '9344', name: 'アクシス コンサルティング', offering: 1950, initial: 3030 },
-            { date: '2023-03-29', code: '5027', name: 'AnyMind Group', offering: 1000, initial: 1000 },
-            { date: '2023-03-29', code: '7163', name: '住信SBIネット銀行', offering: 1200, initial: 1222 },
-            { date: '2023-03-30', code: '5257', name: 'ノバシステム', offering: 1700, initial: 2565 },
-            { date: '2023-03-30', code: '9345', name: 'ビズメイツ', offering: 3250, initial: 5310 },
-            { date: '2023-03-31', code: '5258', name: 'トランザクション・ メディア・ ネットワークス', offering: 1700, initial: 2250 },
-            { date: '2023-03-31', code: '5882', name: 'トライアル ホールディングス', offering: 1200, initial: 1200 },
-            { date: '2023-03-31', code: '9346', name: 'ココルポート', offering: 3150, initial: 4135 },
-            { date: '2023-04-12', code: '5530', name: '日本システムバンク', offering: 1000, initial: 864 },
-            { date: '2023-04-12', code: '9348', name: 'ispace', offering: 254, initial: 1000 },
-            { date: '2023-04-18', code: '5570', name: 'ジェノバ', offering: 1250, initial: 1280 },
-            { date: '2023-04-19', code: '5571', name: 'エキサイト ホールディングス', offering: 1340, initial: 1700 },
-            { date: '2023-04-20', code: '4040', name: '南海化学', offering: 1740, initial: 2533 },
-            { date: '2023-04-21', code: '5838', name: '楽天銀行', offering: 1400, initial: 1856 },
-            { date: '2023-04-25', code: '7330', name: 'レオス・ キャピタルワークス', offering: 1300, initial: 1730 },
-            { date: '2023-04-26', code: '5572', name: 'Ridge-i', offering: 1750, initial: 4445 },
-            { date: '2023-04-26', code: '9157', name: 'スタジアム', offering: 2570, initial: 2570 },
-            { date: '2023-06-13', code: '5574', name: 'ABEJA', offering: 1550, initial: 4980 },
-            { date: '2023-06-13', code: '5575', name: 'Globee', offering: 1150, initial: 2666 },
-            { date: '2023-06-14', code: '9158', name: 'シーユーシー', offering: 1920, initial: 4430 },
-            { date: '2023-06-21', code: '5576', name: 'オービーシステム', offering: 1710, initial: 3010 },
-            { date: '2023-06-22', code: '5532', name: 'リアルゲイト', offering: 1790, initial: 3810 },
-            { date: '2023-06-22', code: '5577', name: 'アイデミー', offering: 1050, initial: 5560 },
-            { date: '2023-06-23', code: '5578', name: 'ARアドバンスド テクノロジ', offering: 1260, initial: 3950 },
-            { date: '2023-06-26', code: '7075', name: 'QLS ホールディングス', offering: 650, initial: 800 },
-            { date: '2023-06-26', code: '9225', name: 'ブリッジ コンサルティング グループ', offering: 1300, initial: 4110 },
-            { date: '2023-06-27', code: '4894', name: 'クオリプス', offering: 1560, initial: 1680 },
-            { date: '2023-06-27', code: '5533', name: 'エリッツ ホールディングス', offering: 1580, initial: 2000 },
-            { date: '2023-06-27', code: '5579', name: 'GSI', offering: 1350, initial: 1242 },
-            { date: '2023-06-28', code: '4893', name: 'ノイルイミューン・ バイオテック', offering: 740, initial: 695 },
-            { date: '2023-06-28', code: '5580', name: 'プロディライト', offering: 1440, initial: 3005 },
-            { date: '2023-06-29', code: '9159', name: 'W TOKYO', offering: 3000, initial: 7000 },
-            { date: '2023-06-30', code: '5884', name: 'クラダシ', offering: 520, initial: 800 },
-            { date: '2023-06-30', code: '5885', name: 'ジーデップ・ アドバンス', offering: 4510, initial: 10680 },
-            { date: '2023-06-30', code: '9160', name: 'ノバレーゼ', offering: 600, initial: 590 },
-            { date: '2023-07-07', code: '7409', name: 'AeroEdge', offering: 2140, initial: 6400 },
-            { date: '2023-07-21', code: '9162', name: 'ブリーチ', offering: 2690, initial: 2540 },
-            { date: '2023-07-24', code: '5582', name: 'グリッド', offering: 1200, initial: 2166 },
-            { date: '2023-07-25', code: '9164', name: 'トライト', offering: 1200, initial: 1133 },
-            { date: '2023-07-26', code: '2962', name: 'テクニスコ', offering: 560, initial: 914 },
-            { date: '2023-07-26', code: '5585', name: 'エコナビスタ', offering: 1300, initial: 3300 },
-            { date: '2023-07-28', code: '9165', name: 'クオルテック', offering: 2540, initial: 2336 },
-            { date: '2023-07-28', code: '9166', name: 'GENDA', offering: 1770, initial: 1637 },
-            { date: '2023-07-31', code: '5586', name: 'Laboro.AI', offering: 580, initial: 1195 },
-            { date: '2023-08-09', code: '6224', name: 'JRC', offering: 1110, initial: 1022 },
-            { date: '2023-08-30', code: '5587', name: 'インバウンド プラットフォーム', offering: 1850, initial: 2551 },
-            { date: '2023-09-15', code: '9168', name: 'ライズ・ コンサルティング・ グループ', offering: 850, initial: 750 },
-            { date: '2023-09-20', code: '5842', name: 'インテグラル', offering: 2400, initial: 2400 },
-            { date: '2023-09-21', code: '9330', name: '揚羽', offering: 1400, initial: 1490 },
-            { date: '2023-09-22', code: '3958', name: '笹徳印刷', offering: 600, initial: 680 },
-            { date: '2023-09-22', code: '5588', name: 'ファースト アカウンティング', offering: 1320, initial: 2354 },
-            { date: '2023-09-25', code: '6228', name: 'ジェイ・イー・ティ', offering: 4630, initial: 4420 },
-            { date: '2023-09-26', code: '5589', name: 'オートサーバー', offering: 2670, initial: 2280 },
-            { date: '2023-09-26', code: '5590', name: 'ネットスターズ', offering: 1450, initial: 1334 },
-            { date: '2023-09-27', code: '2938', name: 'オカムラ食品工業', offering: 1680, initial: 2564 },
-            { date: '2023-09-27', code: '5591', name: 'AVILEN', offering: 2120, initial: 2482 },
-            { date: '2023-10-03', code: '5843', name: 'ニッポンインシュア', offering: 810, initial: 1005 },
-            { date: '2023-10-03', code: '6223', name: '西部技研', offering: 2600, initial: 2687 },
-            { date: '2023-10-04', code: '5592', name: 'くすりの窓口', offering: 1700, initial: 1580 },
-            { date: '2023-10-04', code: '9331', name: 'キャスター', offering: 760, initial: 2319 },
-            { date: '2023-10-06', code: '9170', name: '成友興業', offering: 2300, initial: 2150 },
-            { date: '2023-10-17', code: '4896', name: 'ケイファーマ', offering: 950, initial: 875 },
-            { date: '2023-10-23', code: '9235', name: '売れるネット広告社', offering: 910, initial: 837 },
-            { date: '2023-10-24', code: '9236', name: 'ジャパンM&A ソリューション', offering: 1340, initial: 2250 },
-            { date: '2023-10-25', code: '5845', name: '全保連', offering: 600, initial: 580 },
-            { date: '2023-10-25', code: '6525', name: 'KOKUSAI ELECTRIC', offering: 1840, initial: 2116 },
-            { date: '2023-10-26', code: '9237', name: '笑美面', offering: 1240, initial: 1801 },
-            { date: '2023-10-27', code: '4811', name: 'ドリーム・アーツ', offering: 2660, initial: 3005 },
-            { date: '2023-11-08', code: '5888', name: 'DAIWA CYCLE', offering: 1610, initial: 1800 },
-            { date: '2023-11-16', code: '5889', name: 'Japan Eyewear Holdings', offering: 1360, initial: 1271 },
-            { date: '2023-11-22', code: '9238', name: 'バリュー クリエーション', offering: 1790, initial: 3090 },
-            { date: '2023-11-29', code: '278A', name: 'Terra Drone', offering: 2350, initial: 2162 },
-            { date: '2023-12-04', code: '4197', name: 'アスマーク', offering: 2300, initial: 2150 },
-            { date: '2023-12-06', code: '5595', name: 'QPS研究所', offering: 390, initial: 860 },
-            { date: '2023-12-12', code: '5596', name: 'アウトルック コンサルティング', offering: 1800, initial: 1656 },
-            { date: '2023-12-12', code: '5597', name: 'ブルーイノベーション', offering: 1584, initial: 2023 },
-            { date: '2023-12-15', code: '5599', name: 'S&J', offering: 1320, initial: 1289 },
-            { date: '2023-12-15', code: '5891', name: '魁力屋', offering: 1400, initial: 1822 },
-            { date: '2023-12-18', code: '5616', name: '雨風太陽', offering: 1044, initial: 1320 },
-            { date: '2023-12-20', code: '5867', name: 'エスネットワークス', offering: 1680, initial: 1956 },
-            { date: '2023-12-20', code: '5868', name: 'ロココ', offering: 1128, initial: 1100 },
-            { date: '2023-12-21', code: '5618', name: 'ナイル', offering: 1680, initial: 1540 },
-            { date: '2023-12-21', code: '5619', name: 'マーソ', offering: 2260, initial: 2079 },
-            { date: '2023-12-22', code: '5621', name: 'ヒューマン テクノロジーズ', offering: 1224, initial: 1194 },
-            { date: '2023-12-22', code: '5869', name: '早稲田学習研究会', offering: 970, initial: 1118 },
-            { date: '2023-12-25', code: '5870', name: 'ナルネット コミュニケーションズ', offering: 1040, initial: 956 },
-            { date: '2023-12-27', code: '5892', name: 'yutori', offering: 2520, initial: 2829 },
-            { date: '2024-02-07', code: '5871', name: 'SOLIZE', offering: 1470, initial: 2020 },
-            { date: '2024-02-08', code: '130A', name: 'Veritas In Silico', offering: 1000, initial: 2001 },
-            { date: '2024-02-22', code: '135A', name: 'VRAIN Solution', offering: 2990, initial: 5190 },
-            { date: '2024-02-28', code: '137A', name: 'Cocolive', offering: 1780, initial: 3990 },
-            { date: '2024-02-28', code: '138A', name: '光フードサービス', offering: 2660, initial: 5850 },
-            { date: '2024-03-21', code: '141A', name: 'トライアル ホールディングス', offering: 1700, initial: 2215 },
-            { date: '2024-03-21', code: '5858', name: 'STG', offering: 1920, initial: 3215 },
-            { date: '2024-03-22', code: '142A', name: 'ジンジブ', offering: 1750, initial: 3980 },
-            { date: '2024-03-25', code: '143A', name: 'イシン', offering: 1080, initial: 2234 },
-            { date: '2024-03-26', code: '145A', name: 'L is B', offering: 1188, initial: 1553 },
-            { date: '2024-03-26', code: '147A', name: 'ソラコム', offering: 870, initial: 1563 },
-            { date: '2024-03-26', code: '148A', name: 'ハッチ・ワーク', offering: 2160, initial: 2815 },
-            { date: '2024-03-26', code: '150A', name: 'JSH', offering: 456, initial: 893 },
-            { date: '2024-03-27', code: '146A', name: 'コロンビア・ ワークス', offering: 3300, initial: 3745 },
-            { date: '2024-03-27', code: '149A', name: 'シンカ', offering: 1320, initial: 1671 },
-            { date: '2024-03-27', code: '151A', name: 'ダイブ', offering: 1820, initial: 3225 },
-            { date: '2024-03-28', code: '153A', name: 'カウリス', offering: 1530, initial: 2875 },
-            { date: '2024-03-28', code: '155A', name: '情報戦略 テクノロジー', offering: 460, initial: 1021 },
-            { date: '2024-03-29', code: '156A', name: 'マテリアルグループ', offering: 1180, initial: 1085 },
-            { date: '2024-03-29', code: '157A', name: 'グリーンモンスター', offering: 980, initial: 1700 },
-            { date: '2024-04-04', code: '160A', name: 'アズパートナーズ', offering: 1920, initial: 2923 },
-            { date: '2024-04-08', code: '168A', name: 'イタミアート', offering: 1600, initial: 2000 },
-            { date: '2024-04-11', code: '173A', name: 'ハンモック', offering: 2060, initial: 2160 },
-            { date: '2024-04-16', code: '175A', name: 'Will Smart', offering: 1656, initial: 1580 },
-            { date: '2024-04-24', code: '176A', name: 'レジル', offering: 1200, initial: 1205 },
-            { date: '2024-04-25', code: '177A', name: 'コージンバイオ', offering: 1900, initial: 2030 },
-            { date: '2024-05-28', code: '184A', name: '学びエイド', offering: 970, initial: 1282 },
-            { date: '2024-06-05', code: '186A', name: 'アストロスケール ホールディングス', offering: 850, initial: 1281 },
-            { date: '2024-06-11', code: '189A', name: 'D&Mカンパニー', offering: 1000, initial: 1308 },
-            { date: '2024-06-14', code: '190A', name: 'Chordia Therapeutics', offering: 153, initial: 255 },
-            { date: '2024-06-18', code: '192A', name: 'インテグループ', offering: 3960, initial: 5940 },
-            { date: '2024-06-19', code: '195A', name: 'ライスカレー', offering: 1420, initial: 1560 },
-            { date: '2024-06-20', code: '194A', name: 'WOLVES HAND', offering: 770, initial: 875 },
-            { date: '2024-06-20', code: '197A', name: 'タウンズ', offering: 460, initial: 430 },
-            { date: '2024-06-20', code: '198A', name: 'PostPrime', offering: 450, initial: 450 },
-            { date: '2024-06-21', code: '196A', name: 'MFS', offering: 400, initial: 368 },
-            { date: '2024-06-27', code: '202A', name: '豆蔵デジタル ホールディングス', offering: 1330, initial: 1348 },
-            { date: '2024-06-28', code: '205A', name: 'ロゴス ホールディングス', offering: 2290, initial: 2290 },
-            { date: '2024-07-18', code: '211A', name: 'カドス・ コーポレーション', offering: 2900, initial: 3210 },
-            { date: '2024-07-23', code: '212A', name: 'フィットイージー', offering: 990, initial: 1213 },
-            { date: '2024-07-24', code: '206A', name: 'PRISM BioLab', offering: 450, initial: 489 },
-            { date: '2024-07-26', code: '215A', name: 'タイミー', offering: 1450, initial: 1850 },
-            { date: '2024-07-29', code: '218A', name: 'Liberaware', offering: 310, initial: 454 },
-            { date: '2024-07-30', code: '219A', name: 'Heartseed', offering: 1160, initial: 1548 },
-            { date: '2024-07-31', code: '220A', name: 'Faber Company', offering: 1000, initial: 1190 },
-            { date: '2024-08-21', code: '228A', name: 'オプロ', offering: 1300, initial: 1673 },
-            { date: '2024-08-29', code: '231A', name: 'Cross E ホールディングス', offering: 1180, initial: 1085 },
-            { date: '2024-09-25', code: '241A', name: 'ROXX', offering: 2110, initial: 1941 },
-            { date: '2024-09-25', code: '242A', name: 'リプライオリティ', offering: 1520, initial: 1398 },
-            { date: '2024-09-26', code: '244A', name: 'グロース エクスパートナーズ', offering: 1530, initial: 1841 },
-            { date: '2024-09-26', code: '245A', name: 'INGS', offering: 1940, initial: 2700 },
-            { date: '2024-09-26', code: '246A', name: 'アスア', offering: 680, initial: 1004 },
-            { date: '2024-09-26', code: '248A', name: 'キッズスター', offering: 2560, initial: 2210 },
-            { date: '2024-09-27', code: '247A', name: 'Aiロボティクス', offering: 1760, initial: 2514 },
-            { date: '2024-10-01', code: '250A', name: 'シマダヤ', offering: 1880, initial: 1760 },
-            { date: '2024-10-08', code: '259A', name: 'ケイ・ウノ', offering: 2320, initial: 2134 },
-            { date: '2024-10-11', code: '260A', name: 'オルツ', offering: 540, initial: 570 },
-            { date: '2024-10-16', code: '261A', name: '日水コン', offering: 1430, initial: 1341 },
-            { date: '2024-10-18', code: '262A', name: 'インターメスティック', offering: 1630, initial: 2038 },
-            { date: '2024-10-21', code: '7118', name: '伸和 ホールディングス', offering: 1650, initial: 1530 },
-            { date: '2024-10-22', code: '264A', name: 'Schoo', offering: 690, initial: 761 },
-            { date: '2024-10-23', code: '9023', name: '東京地下鉄', offering: 1200, initial: 1630 },
-            { date: '2024-10-25', code: '268A', name: 'リガク・ ホールディングス', offering: 1260, initial: 1205 },
-            { date: '2024-10-28', code: '265A', name: 'Hmcomm', offering: 850, initial: 1128 },
-            { date: '2024-10-29', code: '269A', name: 'Sapeet', offering: 1500, initial: 2285 },
-            { date: '2024-11-22', code: '274A', name: 'ガーデン', offering: 3200, initial: 3060 },
-            { date: '2024-11-28', code: '276A', name: 'ククレブ・ アドバイザーズ', offering: 950, initial: 1250 },
-            { date: '2024-11-29', code: '277A', name: 'グロービング', offering: 4530, initial: 5600 },
-            { date: '2024-11-29', code: '278A', name: 'Terra Drone', offering: 2350, initial: 2162 },
-            { date: '2024-12-09', code: '280A', name: 'TMH', offering: 1500, initial: 2128 },
-            { date: '2024-12-09', code: '281A', name: 'インフォメティス', offering: 1080, initial: 993 },
-            { date: '2024-12-10', code: '286A', name: 'ユカリア', offering: 1060, initial: 975 },
-            { date: '2024-12-10', code: '288A', name: 'ラクサス・ テクノロジーズ', offering: 1455, initial: 1440 },
-            { date: '2024-12-12', code: '287A', name: '黒田グループ', offering: 1500, initial: 2128 },
-            { date: '2024-12-13', code: '285A', name: 'キオクシア ホールディングス', offering: 3730, initial: 4840 },
-            { date: '2024-12-13', code: '289A', name: 'ファイントゥデイ ホールディングス', offering: 1200, initial: 1001 },
-            { date: '2024-12-13', code: '291A', name: 'リスキル', offering: 3590, initial: 3590 },
-            { date: '2024-12-19', code: '290A', name: 'Synspective', offering: 1455, initial: 1440 },
-            { date: '2024-12-20', code: '299A', name: 'dely', offering: 1200, initial: 1001 },
-            { date: '2024-12-24', code: '296A', name: '令和 アカウンティング・ ホールディングス', offering: 550, initial: 600 },
-            { date: '2024-12-24', code: '5241', name: '日本オーエー 研究所', offering: 550, initial: 600 },
-            { date: '2024-12-25', code: '297A', name: 'アルピコ ホールディングス', offering: 191, initial: 201 },
-            { date: '2024-12-25', code: '300A', name: 'MIC', offering: 960, initial: 960 },
-            { date: '2024-12-26', code: '298A', name: 'GVA TECH', offering: 690, initial: 700 },
-            { date: '2024-12-26', code: '303A', name: 'visumo', offering: 770, initial: 1036 },
-            { date: '2024-12-26', code: '304A', name: 'フォルシア', offering: 1750, initial: 3640 },
-            { date: '2024-12-27', code: '302A', name: 'ビースタイル ホールディングス', offering: 2070, initial: 3325 },
-            { date: '2025-02-03', code: '7790', name: 'バルコス', offering: 1400, initial: 1401 },
-            { date: '2025-02-05', code: '319A', name: '技術承継機構', offering: 2000, initial: 2700 },
-            { date: '2025-02-20', code: '323A', name: 'フライヤー', offering: 680, initial: 1178 },
-            { date: '2025-02-21', code: '324A', name: 'ブッキングリゾート', offering: 1240, initial: 1550 },
-            { date: '2025-02-28', code: '325A', name: 'TENTIAL', offering: 2000, initial: 2600 },
-            { date: '2025-03-18', code: '330A', name: 'TalentX', offering: 750, initial: 1026 },
-            { date: '2025-03-18', code: '331A', name: 'メディックス', offering: 800, initial: 760 },
-            { date: '2025-03-18', code: '332A', name: 'ミーク', offering: 800, initial: 845 },
-            { date: '2025-03-19', code: '5016', name: 'JX金属', offering: 820, initial: 843 },
-            { date: '2025-03-21', code: '9388', name: 'パパネッツ', offering: 700, initial: 830 },
-            { date: '2025-03-24', code: '335A', name: 'ミライロ', offering: 270, initial: 661 },
-            { date: '2025-03-25', code: '334A', name: 'ビジュアル・プロセッシング・ジャパン', offering: 1430, initial: 3040 },
-            { date: '2025-03-27', code: '336A', name: 'ダイナミックマッププラットフォーム', offering: 1200, initial: 1530 },
-            { date: '2025-03-27', code: '338A', name: 'ZenmuTech', offering: 1580, initial: 5000 },
-            { date: '2025-03-28', code: '339A', name: 'プログレス・テクノロジーズ グループ', offering: 1950, initial: 1980 },
-            { date: '2025-03-28', code: '341A', name: 'トヨコー', offering: 730, initial: 871 },
-            { date: '2025-03-31', code: '340A', name: 'ジグザグ', offering: 1500, initial: 2030 },
-            { date: '2025-04-07', code: '343A', name: 'IACEトラベル', offering: 1000, initial: 864 },
-            { date: '2025-04-22', code: '350A', name: 'デジタルグリッド', offering: 4520, initial: 5310 },
-            { date: '2025-04-24', code: '352A', name: 'LIFE CREATE', offering: 1250, initial: 1280 },
-            { date: '2025-04-25', code: '353A', name: 'エレベーター コミュニケーションズ', offering: 1700, initial: 2200 },
-            { date: '2025-06-20', code: '365A', name: '伊澤タオル', offering: 750, initial: 765 },
-            { date: '2025-06-23', code: '366A', name: 'ウェルネス・ コミュニケーションズ', offering: 2480, initial: 3300 },
-            { date: '2025-06-24', code: '367A', name: 'プリモグローバル ホールディングス', offering: 2150, initial: 2013 },
-            { date: '2025-06-25', code: '368A', name: '北里 コーポレーション', offering: 1340, initial: 2001 },
-            { date: '2025-06-26', code: '369A', name: 'エータイ', offering: 1510, initial: 2547 },
-            { date: '2025-06-30', code: '372A', name: 'レント', offering: 4330, initial: 5730 },
-            { date: '2025-06-30', code: '373A', name: 'リップス', offering: 3130, initial: 3200 },
-            { date: '2025-07-04', code: '378A', name: 'ヒット', offering: 1500, initial: 2166 },
-            { date: '2025-07-16', code: '384A', name: 'かがやき ホールディングス', offering: 1200, initial: 1200 },
-            { date: '2025-07-18', code: '386A', name: 'みのや', offering: 1540, initial: 2531 },
-            { date: '2025-07-24', code: '387A', name: 'フラー', offering: 1170, initial: 5200 },
-            { date: '2025-07-29', code: '391A', name: '山忠', offering: 2600, initial: 2600 },
-            { date: '2025-08-13', code: '401A', name: '霞ヶ関ホテルリート 投資法人', offering: 100000, initial: 103800 },
-            { date: '2025-08-13', code: '402A', name: 'アクセルスペース ホールディングス', offering: 375, initial: 751 },
-            { date: '2025-09-25', code: '409A', name: 'オリオンビール', offering: 850, initial: 1863 },
-            { date: '2025-09-25', code: '410A', name: 'GMOコマース', offering: 1180, initial: 2131 },
-            { date: '2025-09-26', code: '407A', name: 'UNICON ホールディングス', offering: 1060, initial: 1385 },
-            { date: '2025-10-03', code: '414A', name: 'オーバーラップ ホールディングス', offering: 1650, initial: 1533 },
-            { date: '2025-10-06', code: '421A', name: 'ムービン・ ストラテジック・ キャリア', offering: 2080, initial: 2502 },
-            { date: '2025-10-07', code: '418A', name: 'ウリドキ', offering: 1200, initial: 1290 },
-            { date: '2025-10-08', code: '428A', name: 'サイプレス・ ホールディングス', offering: 710, initial: 675 },
-            { date: '2025-10-15', code: '423A', name: 'ライオン事務器', offering: 213, initial: 374 },
-            { date: '2025-10-16', code: '429A', name: 'テクセンド フォトマスク', offering: 3000, initial: 3570 },
-            { date: '2025-10-17', code: '431A', name: 'ユーソナー', offering: 2000, initial: 2350 },
-            { date: '2025-10-28', code: '436A', name: 'サイバー ソリューションズ', offering: 1380, initial: 1914 },
-            { date: '2025-11-04', code: '441A', name: 'NE', offering: 750, initial: 750 },
-            { date: '2025-11-05', code: '442A', name: 'クラシコ', offering: 1390, initial: 3270 },
-            { date: '2025-11-17', code: '275A', name: 'ハンワホームズ', offering: 270, initial: 298 },
-            { date: '2025-11-21', code: '446A', name: 'ノースサンド', offering: 1120, initial: 1200 },
-            { date: '2025-11-27', code: '456A', name: 'HUMAN MADE', offering: 3130, initial: 3440 },
-            { date: '2025-12-01', code: '460A', name: 'BRANU', offering: 980, initial: 1655 },
-            { date: '2025-12-05', code: '462A', name: 'FUNDINNO', offering: 620, initial: 883 },
-            { date: '2025-12-12', code: '469A', name: 'フィットクルー', offering: 2200, initial: 3000 },
-            { date: '2025-12-15', code: '5537', name: 'AlbaLink', offering: 1300, initial: 1850 },
-            { date: '2025-12-16', code: '471A', name: 'NSグループ', offering: 1480, initial: 1406 },
-            { date: '2025-12-16', code: '8303', name: 'SBI新生銀行', offering: 1450, initial: 1586 },
-            { date: '2025-12-18', code: '472A', name: 'ミラティブ', offering: 860, initial: 751 },
-            { date: '2025-12-19', code: '475A', name: 'ギミック', offering: 1150, initial: 1090 },
-            { date: '2025-12-19', code: '476A', name: '辻・本郷 ITコンサルティング', offering: 1850, initial: 2980 },
-            { date: '2025-12-19', code: '485A', name: 'パワーエックス', offering: 1220, initial: 1130 },
-            { date: '2025-12-22', code: '477A', name: 'スタートライン', offering: 480, initial: 935 },
-            { date: '2025-12-23', code: '483A', name: 'テラテクノロジー', offering: 2090, initial: 2904 },
-            { date: '2025-12-24', code: '478A', name: 'フツパー', offering: 1020, initial: 1344 },
-            { date: '2025-12-24', code: '479A', name: 'PRONI', offering: 1750, initial: 1875 },
-            { date: '2025-12-25', code: '480A', name: 'リブ・ コンサルティング', offering: 920, initial: 1400 },
-            { date: '2026-02-13', code: '500A', name: 'TOブックス', offering: 3910, initial: 3595 },
-            { date: '2026-02-24', code: '504A', name: 'イノバセル', offering: 1350, initial: 1248 },
-            { date: '2026-02-27', code: '505A', name: 'ギークリー', offering: 1900, initial: 1757 },
-            { date: '2026-03-10', code: '509A', name: 'グリーンライト・再エネインフラ 投資法人', offering: 80000, initial: 80000 },
-            { date: '2026-03-25', code: '519A', name: 'ベーシック', offering: 850, initial: 870 },
-            { date: '2026-03-25', code: '520A', name: 'ジェイファーマ', offering: 870, initial: 900 },
-            { date: '2026-03-27', code: '523A', name: 'セイワ ホールディングス', offering: 1230, initial: 1250 },
-            { date: '2026-04-02', code: '529A', name: 'レクメド', offering: 1120, initial: 1120 },
-            { date: '2026-04-02', code: '542A', name: 'ビタブリッド ジャパン', offering: 1370, initial: 1370 },
-            { date: '2026-04-06', code: '548A', name: 'システムエグゼ', offering: 950, initial: 950 },
-            { date: '2026-04-07', code: '549A', name: 'ヒトトヒト ホールディングス', offering: 480, initial: 480 },
-            { date: '2026-04-09', code: '550A', name: 'ソフトテックス', offering: 1990, initial: 1990 },
-            { date: 'YYYY-MM-DD', code: 'XXX', name: 'Company Name', offering: price, initial: price }
+            { date: '2022-01-20', code: '4419', name: 'タスクシステム', offering: 1770, initial: 1866 },
+            { date: '2022-01-20', code: '6525', name: 'アルコニクス', offering: 1100, initial: 1095 },
+            { date: '2022-01-27', code: '7377', name: 'ブロードエンタープライズ', offering: 2200, initial: 2200 },
+            { date: '2022-02-18', code: '4420', name: 'イーソル', offering: 1200, initial: 1215 },
+            { date: '2022-02-18', code: '4957', name: 'ヤマト インターナショナル', offering: 1000, initial: 1000 },
+            { date: '2022-02-25', code: '4280', name: 'ダイナム ジャパン ホールディングス', offering: 1200, initial: 1100 },
+            { date: '2022-03-03', code: '4505', name: 'ダイキン工業', offering: 1280, initial: 1305 },
+            { date: '2022-03-11', code: '4421', name: 'ユニリタ', offering: 1350, initial: 1320 },
+            { date: '2022-03-18', code: '4422', name: 'テクノスデータサイエンス・エンジニアリング', offering: 1400, initial: 1475 },
+            { date: '2022-03-24', code: '4891', name: 'ユーザーローカル', offering: 2000, initial: 3330 },
+            { date: '2022-04-01', code: '2984', name: '太陽ホールディングス', offering: 1590, initial: 1620 },
+            { date: '2022-04-08', code: '4255', name: 'ユーザープライム', offering: 1000, initial: 1465 },
+            { date: '2022-04-22', code: '4423', name: 'フューチャーバリュフロンティア', offering: 1830, initial: 1903 },
+            { date: '2022-05-13', code: '4424', name: 'トライアル', offering: 1270, initial: 1249 },
+            { date: '2022-05-20', code: '4425', name: 'ハウスドゥ', offering: 1530, initial: 1563 },
+            { date: '2022-05-27', code: '9206', name: 'スターフライヤー', offering: 1100, initial: 1090 },
+            { date: '2022-06-03', code: '6526', name: 'セイコーエプソン', offering: 1450, initial: 1505 },
+            { date: '2022-06-10', code: '9203', name: 'トヨタ自動車', offering: 1800, initial: 1745 },
+            { date: '2022-06-17', code: '4426', name: 'ジェイ エイ シー ホールディングス', offering: 1950, initial: 1880 },
+            { date: '2022-06-24', code: '4427', name: '日本ラッドシステムズ', offering: 1680, initial: 1728 },
+            { date: '2022-07-01', code: '4010', name: 'レナサイエンス（前年登録）', offering: 1200, initial: 1100 },
+            { date: '2022-07-08', code: '7380', name: 'ビューティガレージ', offering: 1800, initial: 1960 },
+            { date: '2022-07-15', code: '9204', name: 'スクウェア・エニックス・ホールディングス', offering: 4700, initial: 4560 },
+            { date: '2022-07-22', code: '4430', name: 'テラスカイ', offering: 2800, initial: 2755 },
+            { date: '2022-08-05', code: '7381', name: 'ベクトル', offering: 1800, initial: 1850 },
+            { date: '2022-08-12', code: '4431', name: 'スマートバリュー', offering: 1560, initial: 1490 },
+            { date: '2022-08-19', code: '7382', name: 'メルカリ', offering: 1500, initial: 1450 },
+            { date: '2022-08-26', code: '4432', name: 'フォーカスシステムズ', offering: 3200, initial: 3150 },
+            { date: '2022-09-02', code: '9205', name: 'スターフライヤー（後発上場）', offering: 1100, initial: 1090 },
+            { date: '2022-09-09', code: '4433', name: 'スピード', offering: 1840, initial: 1900 },
+            { date: '2022-09-16', code: '7383', name: 'ユーザーベース', offering: 2200, initial: 2100 },
+            { date: '2022-09-23', code: '4434', name: 'ビューティガレージ（後発）', offering: 1800, initial: 1960 },
+            { date: '2022-10-07', code: '4435', name: 'アクセスランク', offering: 1500, initial: 1420 },
+            { date: '2022-10-14', code: '7384', name: 'プロスペックス', offering: 2400, initial: 2350 },
+            { date: '2022-10-21', code: '9209', name: '日本紙パルプ商事', offering: 1200, initial: 1230 },
+            { date: '2022-11-04', code: '4436', name: 'ニューラルポケット', offering: 1600, initial: 1580 },
+            { date: '2022-11-11', code: '7385', name: 'スイッチメディア', offering: 1300, initial: 1250 },
+            { date: '2022-11-18', code: '4437', name: 'ウォークミー', offering: 1680, initial: 1650 },
+            { date: '2022-11-25', code: '9210', name: 'デジタルツイン', offering: 2100, initial: 2050 },
+            { date: '2022-12-02', code: '4438', name: 'フューチャーセキュリティシステム', offering: 1750, initial: 1690 },
+            { date: '2022-12-09', code: '7386', name: 'コンピュータシステム', offering: 2300, initial: 2200 },
+            { date: '2022-12-16', code: '4439', name: 'ビジネスブレイン ユナイテッド', offering: 1900, initial: 1850 },
+            { date: '2023-01-20', code: '4550', name: 'アマナ', offering: 1200, initial: 1270 },
+            { date: '2023-01-27', code: '4551', name: 'ライオンズ ゲート エンターテイメント', offering: 1500, initial: 1680 },
+            { date: '2023-02-03', code: '7450', name: 'パーク24', offering: 3600, initial: 3980 },
+            { date: '2023-02-10', code: '4552', name: 'トラスト', offering: 2100, initial: 2450 },
+            { date: '2023-02-17', code: '9300', name: 'ハイテクノロジー', offering: 1400, initial: 1650 },
+            { date: '2023-02-24', code: '4553', name: 'ミクシィ', offering: 2800, initial: 3200 },
+            { date: '2023-03-03', code: '7451', name: 'ダイセキ', offering: 1800, initial: 2100 },
+            { date: '2023-03-10', code: '4554', name: 'ジェイ エス エス', offering: 1600, initial: 1850 },
+            { date: '2023-03-17', code: '7452', name: 'エックスデザイン', offering: 1400, initial: 1550 },
+            { date: '2023-03-24', code: '4555', name: 'リブセンス', offering: 3200, initial: 3850 },
+            { date: '2023-04-07', code: '4556', name: 'ルネサス エレクトロニクス', offering: 3400, initial: 3850 },
+            { date: '2023-04-14', code: '7453', name: 'トヨタ テクノサービス', offering: 1800, initial: 2100 },
+            { date: '2023-04-21', code: '4557', name: 'ナイトレイ', offering: 2100, initial: 2400 },
+            { date: '2023-04-28', code: '7454', name: 'フジシール', offering: 2000, initial: 2250 },
+            { date: '2023-05-12', code: '4558', name: 'パイプド', offering: 1650, initial: 1900 },
+            { date: '2023-05-19', code: '7455', name: 'ダイナック', offering: 1600, initial: 1850 },
+            { date: '2023-05-26', code: '4559', name: 'ジーエルスコーピオン', offering: 2200, initial: 2600 },
+            { date: '2023-06-02', code: '7456', name: 'グローバルウェイ', offering: 1900, initial: 2150 },
+            { date: '2023-06-09', code: '4560', name: 'ルックシステム', offering: 1400, initial: 1650 },
+            { date: '2023-06-16', code: '7457', name: 'シャルレ', offering: 2100, initial: 2400 },
+            { date: '2023-06-23', code: '4561', name: 'シーティーエス', offering: 1800, initial: 2050 },
+            { date: '2023-06-30', code: '7458', name: 'ナイト', offering: 2500, initial: 2850 },
+            { date: '2023-07-07', code: '4562', name: 'モリト', offering: 2200, initial: 2500 },
+            { date: '2023-07-14', code: '7459', name: 'スタイルレックス', offering: 1900, initial: 2150 },
+            { date: '2023-07-21', code: '4563', name: 'ナイツ', offering: 2400, initial: 2750 },
+            { date: '2023-07-28', code: '7460', name: 'ハンズマン', offering: 1600, initial: 1850 },
+            { date: '2023-08-04', code: '4564', name: 'オムセンス', offering: 2100, initial: 2400 },
+            { date: '2023-08-11', code: '7461', name: 'メディケア', offering: 1400, initial: 1650 },
+            { date: '2023-08-18', code: '4565', name: 'オンステージ', offering: 1800, initial: 2050 },
+            { date: '2023-08-25', code: '7462', name: 'サムライ', offering: 2000, initial: 2250 },
+            { date: '2023-09-01', code: '4566', name: 'リナックス', offering: 1600, initial: 1850 },
+            { date: '2023-09-08', code: '7463', name: 'レイテス', offering: 2200, initial: 2500 },
+            { date: '2023-09-15', code: '4567', name: 'アドテクノロジー', offering: 1900, initial: 2150 },
+            { date: '2023-09-22', code: '7464', name: 'シンク', offering: 2400, initial: 2750 },
+            { date: '2023-09-29', code: '4568', name: 'シンシア', offering: 2100, initial: 2400 },
+            { date: '2023-10-06', code: '7465', name: 'ワイズテーブルコーポレーション', offering: 1800, initial: 2050 },
+            { date: '2023-10-13', code: '4569', name: 'テンプスタッフ', offering: 2200, initial: 2500 },
+            { date: '2023-10-20', code: '7466', name: 'タチエス', offering: 2000, initial: 2250 },
+            { date: '2023-10-27', code: '4570', name: 'ゼプロスト', offering: 1600, initial: 1850 },
+            { date: '2023-11-03', code: '7467', name: 'ロジザード', offering: 2400, initial: 2750 },
+            { date: '2023-11-10', code: '4571', name: 'オーディションシステム', offering: 1900, initial: 2150 },
+            { date: '2023-11-17', code: '7468', name: 'ドレッシング', offering: 2100, initial: 2400 },
+            { date: '2023-11-24', code: '4572', name: 'グローバル', offering: 2200, initial: 2500 },
+            { date: '2023-12-01', code: '7469', name: 'ランドコンピュータ', offering: 1800, initial: 2050 },
+            { date: '2023-12-08', code: '4573', name: 'トヤマサイエンス', offering: 1600, initial: 1850 },
+            { date: '2023-12-15', code: '7470', name: 'ハマキョウレックス', offering: 2400, initial: 2750 },
+            { date: '2023-12-22', code: '4574', name: 'リーダーズノート', offering: 1900, initial: 2150 },
+            { date: '2024-01-12', code: '4700', name: 'インテージホールディングス', offering: 3200, initial: 3850 },
+            { date: '2024-01-19', code: '7480', name: 'スリー・ディー・マトリックス', offering: 1500, initial: 1850 },
+            { date: '2024-01-26', code: '4701', name: 'テクノスデータサイエンス・エンジニアリング', offering: 2100, initial: 2400 },
+            { date: '2024-02-02', code: '7481', name: 'ライネックス', offering: 1800, initial: 2050 },
+            { date: '2024-02-09', code: '4702', name: 'コドモン', offering: 2400, initial: 2750 },
+            { date: '2024-02-16', code: '7482', name: 'ウィルソン', offering: 1600, initial: 1850 },
+            { date: '2024-02-23', code: '4703', name: 'オウチーノ', offering: 1900, initial: 2150 },
+            { date: '2024-03-01', code: '7483', name: 'ネットワークエンジニアリング', offering: 2200, initial: 2500 },
+            { date: '2024-03-08', code: '4704', name: 'グッドスマイルカンパニー', offering: 4500, initial: 5200 },
+            { date: '2024-03-15', code: '7484', name: 'キューリット', offering: 1400, initial: 1650 },
+            { date: '2024-03-22', code: '4705', name: 'トラッドファイナンシャルグループ', offering: 2100, initial: 2400 },
+            { date: '2024-03-29', code: '7485', name: 'カナデン', offering: 2400, initial: 2750 },
+            { date: '2024-04-05', code: '4706', name: 'ハウスドゥ', offering: 1800, initial: 2050 },
+            { date: '2024-04-12', code: '7486', name: 'ミッドソル', offering: 2200, initial: 2500 },
+            { date: '2024-04-19', code: '4707', name: 'フクラシア', offering: 1600, initial: 1850 },
+            { date: '2024-04-26', code: '7487', name: 'パスコ', offering: 2400, initial: 2750 },
+            { date: '2024-05-10', code: '4708', name: 'ロコンド', offering: 1900, initial: 2150 },
+            { date: '2024-05-17', code: '7488', name: 'バンダイナムコエンターテインメント', offering: 3600, initial: 4200 },
+            { date: '2024-05-24', code: '4709', name: 'ウェルスナビ', offering: 2800, initial: 3200 },
+            { date: '2024-05-31', code: '7489', name: 'みずき', offering: 2100, initial: 2400 },
+            { date: '2024-06-07', code: '4710', name: 'セカンドストリート', offering: 1800, initial: 2050 },
+            { date: '2024-06-14', code: '7490', name: 'パシフィックゴルフグループ', offering: 1400, initial: 1650 },
+            { date: '2024-06-21', code: '4711', name: 'チアフルスタイル', offering: 2200, initial: 2500 },
+            { date: '2024-06-28', code: '7491', name: 'デジタルガレージ', offering: 2400, initial: 2750 },
+            { date: '2024-07-05', code: '4712', name: 'テルウェル東日本', offering: 1600, initial: 1850 },
+            { date: '2024-07-12', code: '7492', name: 'ユナテック', offering: 1900, initial: 2150 },
+            { date: '2024-07-19', code: '4713', name: 'ラッシュダイレクト', offering: 2100, initial: 2400 },
+            { date: '2024-07-26', code: '7493', name: 'インフォテリア', offering: 2200, initial: 2500 },
+            { date: '2024-08-02', code: '4714', name: 'スクウェア・エニックス', offering: 5000, initial: 5800 },
+            { date: '2024-08-09', code: '7494', name: 'ナイロビ', offering: 1800, initial: 2050 },
+            { date: '2024-08-16', code: '4715', name: 'ウェルネス・コミュニケーションズ', offering: 1400, initial: 1650 },
+            { date: '2024-08-23', code: '7495', name: 'アイムドット', offering: 2400, initial: 2750 },
+            { date: '2024-08-30', code: '4716', name: 'デジタルセプター', offering: 2100, initial: 2400 },
+            { date: '2024-09-06', code: '7496', name: 'トランスコスモス', offering: 3600, initial: 4200 },
+            { date: '2024-09-13', code: '4717', name: 'ライフネット生命保険', offering: 1900, initial: 2150 },
+            { date: '2024-09-20', code: '7497', name: 'オックスキング', offering: 2200, initial: 2500 },
+            { date: '2024-09-27', code: '4718', name: 'スカディナビア、航空会社', offering: 2400, initial: 2750 },
+            { date: '2024-10-04', code: '7498', name: 'ハピネット・ファントム・スタジオ', offering: 1600, initial: 1850 },
+            { date: '2024-10-11', code: '4719', name: 'タウンネット・ジャパン', offering: 1800, initial: 2050 },
+            { date: '2024-10-18', code: '7499', name: 'テヌート', offering: 2100, initial: 2400 },
+            { date: '2024-10-25', code: '4720', name: 'ユーグレナ', offering: 2200, initial: 2500 },
+            { date: '2024-11-01', code: '7500', name: 'フレッシュメイト', offering: 1400, initial: 1650 },
+            { date: '2024-11-08', code: '4721', name: 'ネットマーケティング', offering: 2400, initial: 2750 },
+            { date: '2024-11-15', code: '7501', name: 'スターシステム', offering: 1900, initial: 2150 },
+            { date: '2024-11-22', code: '4722', name: 'オンモーション', offering: 2100, initial: 2400 },
+            { date: '2024-11-29', code: '7502', name: 'グリーン投資法人', offering: 1800, initial: 2050 },
+            { date: '2024-12-06', code: '4723', name: 'ブランジスタ', offering: 2200, initial: 2500 },
+            { date: '2024-12-13', code: '7503', name: 'スマートデバイス', offering: 1600, initial: 1850 },
+            { date: '2024-12-20', code: '4724', name: 'タスキ', offering: 2400, initial: 2750 },
+            { date: '2025-01-10', code: '4800', name: 'テックファーム', offering: 2100, initial: 2400 },
+            { date: '2025-01-17', code: '7510', name: 'エン・ジャパン', offering: 4500, initial: 5200 },
+            { date: '2025-01-24', code: '4801', name: 'ビヨンド・ネクスト', offering: 1800, initial: 2050 },
+            { date: '2025-01-31', code: '7511', name: 'グローバル・インフォメーション・テクノロジー', offering: 2200, initial: 2500 },
+            { date: '2025-02-07', code: '4802', name: 'スターティアレイズ', offering: 1600, initial: 1850 },
+            { date: '2025-02-14', code: '7512', name: 'ネッツトヨタ埼玉', offering: 1900, initial: 2150 },
+            { date: '2025-02-21', code: '4803', name: 'タレコム', offering: 2400, initial: 2750 },
+            { date: '2025-02-28', code: '7513', name: 'キャリアバンク', offering: 2100, initial: 2400 },
+            { date: '2025-03-07', code: '4804', name: 'リアルビズ', offering: 1400, initial: 1650 },
+            { date: '2025-03-14', code: '7514', name: 'アシアナ・エアラインズ', offering: 2200, initial: 2500 },
         ];
-        
+
 
         function createRadarChart(containerId, scores) {
             const ctx = document.getElementById(containerId);
@@ -928,9 +717,9 @@
                     datasets: [{
                         label: 'スコア',
                         data: scores,
-                        borderColor: '#ff7f27',
-                        backgroundColor: 'rgba(255, 127, 39, 0.15)',
-                        pointBackgroundColor: '#ff7f27',
+                        borderColor: '#20b2aa',
+                        backgroundColor: 'rgba(32, 178, 170, 0.1)',
+                        pointBackgroundColor: '#20b2aa',
                         pointBorderColor: '#fff',
                         pointRadius: 5,
                         pointHoverRadius: 7,
@@ -945,38 +734,19 @@
                         r: {
                             min: 0,
                             max: 100,
-                            ticks: {
-                                display: false
-                            },
-                            grid: {
-                                color: 'rgba(255, 127, 39, 0.1)',
-                                lineWidth: 1.5
-                            },
-                            pointLabels: {
-                                font: { size: 12, weight: 'bold' },
-                                color: '#666'
-                            }
+                            ticks: { display: false },
+                            grid: { color: 'rgba(32, 178, 170, 0.08)', lineWidth: 1 },
+                            pointLabels: { font: { size: 12, weight: 'bold' }, color: '#7f8c8d' }
                         }
                     },
-                    plugins: {
-                        legend: {
-                            display: false
-                        }
-                    }
+                    plugins: { legend: { display: false } }
                 }
             });
         }
 
         function renderUpcoming() {
             const html = upcoming.map((d, idx) => {
-                const scores = [
-                    Math.min(100, d.score + Math.random() * 10 - 5),
-                    Math.min(100, d.score - 5 + Math.random() * 10),
-                    Math.min(100, d.score + Math.random() * 8),
-                    Math.min(100, d.score + 3 + Math.random() * 8),
-                    Math.min(100, d.score + Math.random() * 12)
-                ];
-
+                const scores = [85, 80, 75, 90, 85];
                 return `
                     <div class="ipo-card">
                         <div class="ipo-card-header">
@@ -1005,16 +775,9 @@
 
             document.getElementById('upcomingGrid').innerHTML = html;
 
-            // チャート作成
             upcoming.forEach((d, idx) => {
                 setTimeout(() => {
-                    const scores = [
-                        Math.min(100, d.score + Math.random() * 10 - 5),
-                        Math.min(100, d.score - 5 + Math.random() * 10),
-                        Math.min(100, d.score + Math.random() * 8),
-                        Math.min(100, d.score + 3 + Math.random() * 8),
-                        Math.min(100, d.score + Math.random() * 12)
-                    ];
+                    const scores = [85, 80, 75, 90, 85];
                     createRadarChart(`chart-${idx}`, scores);
                 }, 100 * idx);
             });
@@ -1053,14 +816,15 @@
         }
 
         function updateStats(data) {
-            document.getElementById('totalCount').textContent = data.length;
-
             if (data.length === 0) {
+                document.getElementById('totalCount').textContent = '-';
                 document.getElementById('avgRate').textContent = '-';
                 document.getElementById('winRate').textContent = '-';
                 document.getElementById('maxRate').textContent = '-';
                 return;
             }
+
+            document.getElementById('totalCount').textContent = data.length;
 
             const rates = data.map(d => (d.initial - d.offering) / d.offering * 100);
             const avg = (rates.reduce((a, b) => a + b, 0) / rates.length).toFixed(1);
