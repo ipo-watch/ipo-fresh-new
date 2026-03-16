@@ -1300,8 +1300,30 @@
             return daysUntilEnd <= 3 && daysUntilEnd > 0;
         }
 
+        // 応募期間の終了日を取得
+        function getApplicationDeadline(bookbuildingStr) {
+            const parts = bookbuildingStr.split('～');
+            if (parts.length < 2) return new Date(2099, 0, 1);
+
+            const endDateStr = parts[1].trim();
+            const [month, day] = endDateStr.split('/').map(Number);
+            return new Date(2026, month - 1, day);
+        }
+
+        // コードから企業データを取得
+        function getCompanyByCode(code) {
+            return upcoming.find(c => c.code === code);
+        }
+
         function renderUpcoming() {
-            const html = upcoming.map((d, idx) => {
+            // 応募期間が近い順にソート
+            const sortedUpcoming = [...upcoming].sort((a, b) => {
+                const deadlineA = getApplicationDeadline(a.bookbuilding);
+                const deadlineB = getApplicationDeadline(b.bookbuilding);
+                return deadlineA - deadlineB;
+            });
+
+            const html = sortedUpcoming.map((d, idx) => {
                 const scores = [85, 80, 75, 90, 85];
                 const prediction = calculatePrediction(d.offeringMin, d.offeringMax);
                 const isWatched = watchlist.includes(d.code);
@@ -1313,7 +1335,7 @@
                             <button class="watchlist-btn ${isWatched ? 'added' : ''}" data-code="${d.code}" onclick="addToWatchlist('${d.code}')" title="ウォッチリスト">⭐</button>
                             <div class="ipo-card-score">${d.score}/100</div>
                             <div class="ipo-card-code">${d.code}</div>
-                            <div class="ipo-card-name" style="cursor: pointer;" onclick="showCompanyModal(upcoming[${idx}])">${d.name}</div>
+                            <div class="ipo-card-name" style="cursor: pointer;" onclick="showCompanyModal(getCompanyByCode('${d.code}'))">${d.name}</div>
                             <div class="ipo-card-date">📅 ${d.date}</div>
                         </div>
                         <div class="ipo-card-body">
@@ -1364,7 +1386,7 @@
 
             document.getElementById('upcomingGrid').innerHTML = html;
 
-            upcoming.forEach((d, idx) => {
+            sortedUpcoming.forEach((d, idx) => {
                 setTimeout(() => {
                     const scores = [85, 80, 75, 90, 85];
                     createRadarChart(`chart-${idx}`, scores);
