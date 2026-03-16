@@ -15,9 +15,28 @@
             box-sizing: border-box;
         }
 
+        @keyframes gradientShift {
+            0% {
+                background: linear-gradient(135deg, #ffffff 0%, #e8f7f6 50%, #f0fffe 100%);
+            }
+            25% {
+                background: linear-gradient(45deg, #e8f7f6 0%, #f0fffe 50%, #ffffff 100%);
+            }
+            50% {
+                background: linear-gradient(225deg, #f0fffe 0%, #ffffff 50%, #e8f7f6 100%);
+            }
+            75% {
+                background: linear-gradient(315deg, #ffffff 0%, #e8f7f6 50%, #f0fffe 100%);
+            }
+            100% {
+                background: linear-gradient(135deg, #ffffff 0%, #e8f7f6 50%, #f0fffe 100%);
+            }
+        }
+
         body {
             font-family: 'Noto Sans JP', sans-serif;
             background: linear-gradient(135deg, #ffffff 0%, #e8f7f6 50%, #f0fffe 100%);
+            animation: gradientShift 15s ease infinite;
             min-height: 100vh;
             color: #2c3e50;
         }
@@ -180,7 +199,8 @@
         .ipo-card-score {
             position: absolute;
             top: 15px;
-            right: 15px;
+            left: 50%;
+            transform: translateX(-50%);
             background: rgba(255, 255, 255, 0.2);
             padding: 8px 14px;
             border-radius: 8px;
@@ -513,30 +533,27 @@
 
         .watchlist-btn {
             position: absolute;
-            top: 70px;
-            right: 15px;
-            background: rgba(255, 255, 255, 0.2);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: transparent;
             border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 24px;
             transition: all 0.3s;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 10;
+            padding: 0;
         }
 
         .watchlist-btn:hover {
-            background: rgba(255, 255, 255, 0.4);
-            transform: scale(1.1);
+            transform: translate(-50%, -50%) scale(1.2);
         }
 
         .watchlist-btn.added {
-            background: #ffeb3b;
-            color: #333;
+            color: #ffeb3b;
         }
 
         table {
@@ -640,6 +657,7 @@
         <div class="tabs">
             <button class="tab-btn active" onclick="switchTab(0)">🔔 近日上場</button>
             <button class="tab-btn" onclick="switchTab(1)">📊 過去6年</button>
+            <button class="tab-btn" onclick="location.href='watchlist.html'" style="background: #20b2aa; color: white; margin-left: 20px;">⭐ マイウォッチリスト</button>
         </div>
     </div>
 
