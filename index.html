@@ -17,19 +17,19 @@
 
         @keyframes gradientShift {
             0% {
-                background: linear-gradient(135deg, #ffffff 0%, #e8f7f6 50%, #f0fffe 100%);
+                background: linear-gradient(135deg, #ffffff 0%, #f5fbfa 50%, #f9fffe 100%);
             }
             25% {
-                background: linear-gradient(45deg, #e8f7f6 0%, #f0fffe 50%, #ffffff 100%);
+                background: linear-gradient(45deg, #f5fbfa 0%, #f9fffe 50%, #ffffff 100%);
             }
             50% {
-                background: linear-gradient(225deg, #f0fffe 0%, #ffffff 50%, #e8f7f6 100%);
+                background: linear-gradient(225deg, #f9fffe 0%, #ffffff 50%, #f5fbfa 100%);
             }
             75% {
-                background: linear-gradient(315deg, #ffffff 0%, #e8f7f6 50%, #f0fffe 100%);
+                background: linear-gradient(315deg, #ffffff 0%, #f5fbfa 50%, #f9fffe 100%);
             }
             100% {
-                background: linear-gradient(135deg, #ffffff 0%, #e8f7f6 50%, #f0fffe 100%);
+                background: linear-gradient(135deg, #ffffff 0%, #f5fbfa 50%, #f9fffe 100%);
             }
         }
 
@@ -46,29 +46,61 @@
 
         body {
             font-family: 'Noto Sans JP', sans-serif;
-            background: linear-gradient(135deg, #ffffff 0%, #e8f7f6 50%, #f0fffe 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f5fbfa 50%, #f9fffe 100%);
             animation: gradientShift 15s ease infinite;
             min-height: 100vh;
-            color: #2c3e50;
+            color: #1a3a3a;
+            font-weight: 400;
+            letter-spacing: 0.3px;
         }
 
         .header {
             background: #ffffff;
-            border-bottom: 2px solid #20b2aa;
-            padding: 20px 40px;
+            border-bottom: 1px solid rgba(32, 178, 170, 0.15);
+            padding: 24px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: none;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            backdrop-filter: blur(10px);
         }
 
         .logo {
             font-size: 28px;
             font-weight: 700;
             color: #20b2aa;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #20b2aa 0%, #1a8f85 100%);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .logo-icon::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            border-right: 2.5px solid white;
+            border-top: 2.5px solid white;
+            transform: rotate(-45deg);
+            animation: logoFloat 2s ease-in-out infinite;
+        }
+
+        @keyframes logoFloat {
+            0%, 100% { transform: rotate(-45deg) translateY(0); }
+            50% { transform: rotate(-45deg) translateY(-2px); }
         }
 
         .tabs {
@@ -79,19 +111,36 @@
         .tab-btn {
             background: none;
             border: none;
-            font-size: 16px;
+            font-size: 15px;
             cursor: pointer;
             padding: 10px 20px;
-            border-radius: 8px;
+            border-radius: 6px;
             color: #7f8c8d;
-            transition: all 0.3s;
-            font-weight: 600;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .tab-btn:hover {
+            color: #20b2aa;
+            background: rgba(32, 178, 170, 0.05);
         }
 
         .tab-btn.active {
-            background: #e8f7f6;
+            background: transparent;
             color: #20b2aa;
-            border-bottom: 3px solid #20b2aa;
+            font-weight: 600;
+        }
+
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 20px;
+            right: 20px;
+            height: 2px;
+            background: #20b2aa;
+            border-radius: 1px;
         }
 
         .container {
@@ -111,7 +160,9 @@
         h1 {
             font-size: 28px;
             margin-bottom: 30px;
-            color: #2c3e50;
+            color: #1a3a3a;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .filters {
@@ -123,24 +174,25 @@
 
         .filters select {
             padding: 10px 15px;
-            border: 1px solid #dde4e9;
+            border: 1px solid rgba(32, 178, 170, 0.2);
             border-radius: 8px;
             font-family: inherit;
             cursor: pointer;
             background: #ffffff;
-            transition: all 0.3s;
-            color: #2c3e50;
+            transition: all 0.3s ease;
+            color: #1a3a3a;
+            font-weight: 500;
         }
 
         .filters select:hover {
             border-color: #20b2aa;
-            background: #e8f7f6;
+            background: rgba(32, 178, 170, 0.04);
         }
 
         .filters select:focus {
             outline: none;
             border-color: #20b2aa;
-            box-shadow: 0 0 0 3px rgba(32, 178, 170, 0.1);
+            box-shadow: 0 0 0 3px rgba(32, 178, 170, 0.08);
         }
 
         .stats {
@@ -152,16 +204,17 @@
 
         .stat-card {
             background: #ffffff;
-            padding: 20px;
+            padding: 24px;
             border-radius: 12px;
-            border: 1px solid #f0f3f6;
-            box-shadow: none;
-            transition: all 0.3s;
+            border: 1px solid rgba(32, 178, 170, 0.08);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
         }
 
         .stat-card:hover {
-            border-color: #20b2aa;
-            box-shadow: none;
+            border-color: rgba(32, 178, 170, 0.2);
+            box-shadow: 0 4px 12px rgba(32, 178, 170, 0.1);
+            transform: translateY(-1px);
         }
 
         .stat-label {
@@ -189,15 +242,15 @@
             background: #ffffff;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: none;
-            transition: all 0.3s;
-            border: 1px solid #f0f3f6;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(32, 178, 170, 0.08);
         }
 
         .ipo-card:hover {
-            transform: none;
-            box-shadow: none;
-            border-color: #20b2aa;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(32, 178, 170, 0.12);
+            border-color: rgba(32, 178, 170, 0.3);
         }
 
         .ipo-card.bb-ended {
@@ -224,9 +277,9 @@
         }
 
         .ipo-card-header {
-            background: #20b2aa;
+            background: linear-gradient(135deg, #20b2aa 0%, #1a9b9a 100%);
             color: white;
-            padding: 20px;
+            padding: 24px 20px;
             position: relative;
         }
 
@@ -319,23 +372,26 @@
         }
 
         .btn-remind {
-            background: #20b2aa;
+            background: linear-gradient(135deg, #20b2aa 0%, #1a9b9a 100%);
             color: white;
+            border: none;
         }
 
         .btn-remind:hover {
-            background: #1a8f85;
-            transform: scale(1.02);
+            background: linear-gradient(135deg, #1a9b9a 0%, #15838a 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(32, 178, 170, 0.3);
         }
 
         .btn-share {
-            background: #f0f3f6;
+            background: transparent;
             color: #20b2aa;
-            border: 1px solid #20b2aa;
+            border: 1px solid rgba(32, 178, 170, 0.3);
         }
 
         .btn-share:hover {
-            background: #e8f7f6;
+            background: rgba(32, 178, 170, 0.08);
+            border-color: #20b2aa;
         }
 
         .affiliates {
@@ -685,7 +741,7 @@
 </head>
 <body>
     <div class="header">
-        <div class="logo">📈 IPO Watch</div>
+        <div class="logo"><div class="logo-icon"></div>IPO Watch</div>
         <div class="tabs">
             <button class="tab-btn active" onclick="switchTab(0)">🔔 近日上場</button>
             <button class="tab-btn" onclick="switchTab(1)">📊 過去6年</button>
